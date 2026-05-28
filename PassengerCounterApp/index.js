@@ -1,9 +1,15 @@
-// document.getElementById("count").innerText = 5
-
+let saveEl = document.getElementById("save-el");
+let countEl = document.getElementById("count-el");
 let count = 0;
 
-console.log(count);
+function increment() {
+  count += 1;
+  countEl.textContent = count;
+}
 
-let myAge = 26;
-
-console.log(myAge);
+function save() {
+  let countStr = count + " - ";
+  saveEl.textContent += countStr;
+  count = 0;
+  countEl.textContent = 0;
+}
